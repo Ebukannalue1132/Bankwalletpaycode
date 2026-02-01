@@ -1,0 +1,124 @@
+><!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BANKWALLET</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #ffffff;
+        padding: 20px;
+        color: #333;
+        max-width: 600px;
+        margin: auto;
+        width: 100%;
+    }
+
+    h1 {
+        text-align: center;
+        color: #1a73e8;
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+
+    h3 {
+        text-align: center;
+        margin-top: 5px;
+        font-weight: normal;
+        color: #1a73e8;
+    }
+
+    .warning-box {
+        background: #ffecec;
+        padding: 20px;
+        border-radius: 12px;
+        margin-top: 25px;
+        border: 1px solid #ffd6d6;
+        line-height: 1.6;
+    }
+
+    .account-box {
+        background: #eaf5ff;
+        padding: 20px;
+        border-radius: 12px;
+        margin-top: 25px;
+        border: 1px solid #cfe7ff;
+        line-height: 1.6;
+    }
+
+    .label {
+        font-weight: bold;
+    }
+
+    .copy-btn {
+        background: #1a73e8;
+        color: white;
+        padding: 12px 18px;
+        border: none;
+        cursor: pointer;
+        border-radius: 8px;
+        font-size: 16px;
+        margin-top: 10px;
+        width: 100%;
+        transition: 0.2s ease;
+    }
+
+    .copy-btn:active {
+        opacity: 0.8;
+    }
+
+    @media (max-width: 480px) {
+        body {
+            padding: 15px;
+        }
+
+        h1 {
+            font-size: 26px;
+        }
+
+        .warning-box, .account-box {
+            padding: 15px;
+        }
+
+        .copy-btn {
+            font-size: 15px;
+            padding: 11px;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<h1>BANKWALLET</h1>
+<h3>(Withdrawal Code Payment)</h3>
+
+
+<div class="account-box">
+    <p class="label">Account Name: <span style="color:#1a73e8;">OBIA CHIOMA JULIET</span></p>
+    <p class="label">Bank: <span style="color:#1a73e8;">MONIEPOINT</span></p>
+    <p class="label">Account Number: <span id="acctNumber" style="color:#1a73e8;">5086060460</span></p>
+
+    <button class="copy-btn" onclick="copyAccountNumber()">Copy account number</button>
+</div>
+
+<p style="text-align:center; margin-top:25px; font-size:14px;">
+    After making payment, kindly send proof of payment (screenshot or receipt) for confirmation via your BankWallet mobile app.
+</p>
+
+<p style="text-align:center; margin-top:30px; font-size:13px;">
+    This page is secure and for verified payments only.
+</p>
+
+<script>
+    function copyAccountNumber() {
+        let accNum = document.getElementById("acctNumber").innerText;
+        navigator.clipboard.writeText(accNum);
+        alert("Account number copied successfully!");
+    }
+</script>
+
+
+
+</body></html>
